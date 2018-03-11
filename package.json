@@ -1,5 +1,5 @@
 {
-  "name": "simplest-nodejs-server",
+  "name": "simplest-nodejs-google-app-engine-server",
   "version": "1.0.0",
   "description": "This is the simplest server that you can make in NodeJS",
   "main": "app.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesJansson/simplest-nodejs-server.git"
+    "url": "git+https://github.com/JamesJansson/simplest-nodejs-google-app-engine-server.git"
   },
   "keywords": [
     "NodeJS",
@@ -19,9 +19,9 @@
   "author": "James Jansson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JamesJansson/simplest-nodejs-server/issues"
+    "url": "https://github.com/JamesJansson/simplest-nodejs-google-app-engine-server/issues"
   },
-  "homepage": "https://github.com/JamesJansson/simplest-nodejs-server#readme",
+  "homepage": "https://github.com/JamesJansson/simplest-nodejs-google-app-engine-server#readme",
   "dependencies": {
     "express": "^4.16.2"
   }
