@@ -43,3 +43,18 @@ var server = app.listen(process.env.PORT || '8080' , function () {
 });
 ~~~
 Tells the server to listen either on `process.env.PORT ` if it is set (useful if you plan to upload it to a hosting environment that sets its own ports), or on 8080. Once that is done, it tells the user that the server is running and which port it is running on. 
+
+# How to create this from scratch
+1) [Create a new repository on GitHub](https://github.com/new).
+2) Clone to your local computer.
+3) Use NPM to create the package.json file. Navigate your terminal the the project folder, run the following and enter the details as instructed.
+~~~
+npm init
+~~~
+![Running npm init](/tutorial/img/npm-init.png)
+4) Create `.gitignore` file, add the line `node_modules`
+5) Run 
+~~~ 
+npm install express --save 
+~~~
+6) Create app.js file
