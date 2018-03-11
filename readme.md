@@ -20,26 +20,33 @@ After doing the above:
 9) Make sure the project is selected
 ![Select the project](/tutorial/img/gcp4.png)
 
-10) Run the following command 
+10) Install the [Google Cloud SDK](https://cloud.google.com/sdk/)
+
+11) Run the following command 
 ~~~
 gcloud init
 ~~~
 Create a new configuration. It can have any name. 
 
-11) Log in to your Google account.
+12) Log in to your Google account.
 
-12) Select the project that you create above.
+13) Select the project that you create above.
 
-13) Select the region
+14) Select the region
 
-14) Choose a region that the server will be hosted in
+15) Choose a region that the server will be hosted in
 
-15) Run the following command
+16) Run the following command
 ~~~
 gcloud app deploy
 ~~~
 
-16) Wait for the app to deploy. 
+17) Wait for the app to deploy. 
+
+18) Visit the address that is displayed when the deploy command finishes.
+~~~
+Deployed service [default] to [https://test-project-197703.appspot.com]
+~~~
 
 # How app.js works
 ~~~
