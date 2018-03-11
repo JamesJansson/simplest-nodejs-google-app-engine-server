@@ -1,9 +1,45 @@
-# Instructions for running this server
+# Instructions for running this server locally
 1) Install [NodeJS](https://nodejs.org/)
 2) Download or clone this repository
 3) Open the NodeJS Terminal. Run `npm install` to add the needed ExpressJS files into the node_modules folder
 4) Run `node app.js`
-5) Open [localhost:8080](http://localhost:8080/) in your browser. You should see "Hello, world!" displayed.
+5) Open [localhost:8080](http://localhost:8080/) in your browser. You should see "Hello, world!" displayed. You are now running a local server. 
+
+# Instructions for running this server on Google App Engine
+After doing the above:
+
+6) [Set up Google Cloud Platform](https://cloud.google.com/)
+
+7) Create a new project
+![Create a project](/tutorial/img/gcp12.png)
+
+8) Name the project
+
+![Name the project](/tutorial/img/gcp3.png)
+
+9) Make sure the project is selected
+![Select the project](/tutorial/img/gcp4.png)
+
+10) Run the following command 
+~~~
+gcloud init
+~~~
+Create a new configuration. It can have any name. 
+
+11) Log in to your Google account.
+
+12) Select the project that you create above.
+
+13) Select the region
+
+14) Choose a region that the server will be hosted in
+
+15) Run the following command
+~~~
+gcloud app deploy
+~~~
+
+16) Wait for the app to deploy. 
 
 # How app.js works
 ~~~
@@ -46,15 +82,38 @@ Tells the server to listen either on `process.env.PORT ` if it is set (useful if
 
 # How to create this from scratch
 1) [Create a new repository on GitHub](https://github.com/new).
+
 2) Clone to your local computer.
+
 3) Use NPM to create the package.json file. Navigate your terminal the the project folder, run the following and enter the details as instructed.
 ~~~
 npm init
 ~~~
 ![Running npm init](/tutorial/img/npm-init.png)
+
 4) Create `.gitignore` file, add the line `node_modules`
+
 5) Run 
 ~~~ 
 npm install express --save 
 ~~~
+
 6) Create app.js file
+
+## Make the changes needed to upload it to the Google Cloud Platform
+
+7) Add the following to the app.yaml file
+~~~
+runtime: nodejs
+env: flex
+~~~
+Note: a lot of tutorials on the internet (including [this video](https://www.youtube.com/watch?v=n4svrNcAkJg) that inspired this project) use `vm: true` which is no longer supported. We use `env: flex` instead.
+
+8) Add a 'start' command into the `scripts` object in package.json `"start": "node app.js"`
+~~~
+"scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+~~~
+This command tells the server what to do on start. 
