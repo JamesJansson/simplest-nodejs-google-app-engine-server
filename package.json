@@ -1,0 +1,24 @@
+{
+  "name": "simplest-nodejs-server",
+  "version": "1.0.0",
+  "description": "This is the simplest server that you can make in NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesJansson/simplest-nodejs-server.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "server"
+  ],
+  "author": "James Jansson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesJansson/simplest-nodejs-server/issues"
+  },
+  "homepage": "https://github.com/JamesJansson/simplest-nodejs-server#readme"
+}
