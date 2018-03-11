@@ -5,5 +5,5 @@ app.get('/', function(req, res){
     res.status(200).send('Hello, world!');
 });
 var server = app.listen(process.env.PORT || '8080' , function () {
-    console.log('App listening on port %s', sever.address().port);
+    console.log('App listening on port %s', server.address().port);
 });
